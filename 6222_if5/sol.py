@@ -7,7 +7,6 @@ if a.islower():
     b = a.upper()
 else:
     b = a.lower()
-    print(f)
 
 print(a,b)
 print(ord(a),ord(b)) #아스키코드 확인
