@@ -6,3 +6,11 @@ def solution(my_string):
 
 print(solution("jaron"))
 print(solution("bread"))
+
+# 다른 방법
+def solution(my_string):
+    answer = my_string.reverse()
+    return answer
+
+print(solution("jaron"))
+print(solution("bread"))

@@ -5,9 +5,10 @@ def solution(numbers):
 print(solution([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 print(solution([89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]))
 
-# def solution(numbers):
+# 다른 방법
+def solution(numbers):
     
-#     total = sum(numbers)
-#     length = len(numbers)
+    total = sum(numbers)
+    length = len(numbers)
 
-#     return total / length
+    return total / length
