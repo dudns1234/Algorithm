@@ -20,25 +20,24 @@ for tc in range(1, T+1):
     count = 0
     #print(k,n,m,numbers)
     while yj < n:
-        for i in range(0,n+1,k):
-            if i == '0':
-                pass
-            if int(i) in numbers:
-                count +=1
-                yj = i
-            else:
-                pass
-                no_count = 0
-                for j in range(i-1,k,-1):
-                    if int(j) in numbers:
-                        count +=1
-                        yj = j
-                    else:
-                        no_count +=1
-                    if no_count >= k-1:
-                        print("0")
+        for i in range(0,n+1,3):
+            if i > 0 :
+                if i in numbers:
+                    count += 1
+                    yj += 3
+                else:
+                    for j in range(1,k):
+                        no_count = 0
+                        if i-j in numbers:
+                            count += 1
+                            yj += i-j
+                        else:
+                            no_count += 1
+                    if no_count >= k:
+                        print('0')
                         break
-    # print(f'#{tc} {count}')                    
+
+        print(count)                    
 
 
 # result = 0
