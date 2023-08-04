@@ -3,20 +3,20 @@ sys.stdin = open('input.txt')
 
 T = 10
 
+# 2번째 풀어봄
 for tc in range(1,T+1):
     tc = int(input())
-    matrix = []
 
-    for _ in range(100):
+    matrix = []
+    for i in range(100):
         row = list(map(int,input().split()))
         matrix.append(row)
-    #print(matrix)
+
     total = 0
-    # raw 기준
     for i in range(100):
         temp = 0
         for j in range(100):
-           temp += matrix[i][j] # matrix[0][0], [0][1]
+            temp += matrix[i][j]  # row
     
         if temp > total:
             total = temp
@@ -24,25 +24,72 @@ for tc in range(1,T+1):
     for i in range(100):
         temp = 0
         for j in range(100):
-            temp += matrix[j][i] # matrix[0][0], [1][0]
+            temp += matrix[j][i]  # column
         
         if temp > total:
             total = temp
+    
     temp = 0
     for i in range(100):
         temp += matrix[i][i]
     
     if temp > total:
         total = temp
+
     temp = 0
-    
     for i in range(100):
         temp += matrix[99-i][i]
     
     if temp > total:
         total = temp
-
+    
     print(f'#{tc} {total}')
+
+
+
+
+
+# 1번째 풀어봄
+# for tc in range(1,T+1):
+#     tc = int(input())
+#     matrix = []
+
+#     for _ in range(100):
+#         row = list(map(int,input().split()))
+#         matrix.append(row)
+#     #print(matrix)
+#     total = 0
+#     # raw 기준
+#     for i in range(100):
+#         temp = 0
+#         for j in range(100):
+#            temp += matrix[i][j] # matrix[0][0], [0][1]
+    
+#         if temp > total:
+#             total = temp
+
+#     for i in range(100):
+#         temp = 0
+#         for j in range(100):
+#             temp += matrix[j][i] # matrix[0][0], [1][0]
+        
+#         if temp > total:
+#             total = temp
+#     temp = 0
+#     for i in range(100):
+#         temp += matrix[i][i]
+    
+#     if temp > total:
+#         total = temp
+#     temp = 0
+    
+#     for i in range(100):
+#         temp += matrix[99-i][i]
+    
+#     if temp > total:
+#         total = temp
+
+#     print(f'#{tc} {total}')
 
 
         

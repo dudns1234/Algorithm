@@ -3,39 +3,38 @@ sys.stdin = open('input.txt')
 
 T = int(input())
 
+# 내풀이
+for tc in range(1,T+1):
+    n = int(input())
+    matrix = []
+    for i in range(n):
+        matrix.append(list(map(int, input().split())))
+    #print(matrix)
+    red = []
+    blue = []
 
-for tc in range(1, T+1):
-    N = int(input())
-    list1 = []
-    for i in range(N):
-        list1.append(list(map(int,input().split()))) # x1 = 2, y1 = 2, x2 = 4, y2 = 4
-    
-    print(list1)
-    
-    for i in list1:
-        if i[-1] == 1:
-            red = []
-            blue = []
-            for x in range(i[0],int(i[2])+1):
-                for y in range(i[0],int(i[2])+1):
-                    red.append((x,y))
-            print(red)
-        if i[-1] == 2:
-            for x in range(i[0],int(i[2])+1):
-                for y in range(i[0],int(i[2])+1):
-                    blue.append((x,y))
-            #print(blue)
+    for i in range(len(matrix)):
+        if matrix[i][-1] == 1:
+            for x in range(matrix[i][0],matrix[i][2]+1):
+                for y in range(matrix[i][1],matrix[i][3]+1):
+                    if (x,y) not in red:
+                          red.append((x,y))
+        if matrix[i][-1] == 2:
+            for x in range(matrix[i][0],matrix[i][2]+1):
+                for y in range(matrix[i][1],matrix[i][3]+1):
+                    if (x,y) not in blue:
+                          blue.append((x,y))
+    #print(set(red)&set(blue))
     print(f'#{tc} {len(set(red) & set(blue))}')
 
 
-        
 
-    
+# 강사님 풀이    
 # for tc in range(1, T+1):
 
 #     N = int(input())
 
-#     board = [[0 for _ in range(10)] for _ in range(10)]
+#     board = [[0 for _ in range(10)] for _ in range(10)]  10*10 board 만들기
 
 
 #     for i in range(N):
