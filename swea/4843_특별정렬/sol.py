@@ -30,9 +30,8 @@ for tc in range(1, T+1):
     #print(' '.join(result[0:10]))
 
     result2 = list(map(str,result))
-    result3 =' '.join(result2)
-    print(result3)
-    print(f'#{tc} {result3[0:10]}')
+    result3 =' '.join(result2[0:10])
+    print(f'#{tc} {result3}')
     
 
 
