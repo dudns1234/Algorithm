@@ -1,4 +1,4 @@
-# 모든 경우의 수를 탐색하는데 세로가 아닌
+# 모든 경우의 수를 탐색 + 세로로 포함하지 않은 경우 탐색
 
 import sys
 from pathlib import Path
