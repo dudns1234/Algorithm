@@ -1,5 +1,4 @@
 # 모든 경우의 수를 탐색하는 경우
-
 import sys
 from pathlib import Path
 from pprint import pprint
