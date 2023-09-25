@@ -7,33 +7,6 @@ sys.stdin = open(input_path)
 
 T = int(input())
 
-# def inorder(idx):
-#     global value
-
-#     if idx <= N:
-
-#         # 왼쪽자식
-#         inorder(idx*2)
-
-#         # 현재노드
-#         if idx // 2 
-#         heap[idx].append(max(value))
-
-#         # 오른쪽자식
-#         inorder(idx*2 + 1)
-
-# for tc in range(1, T+1):
-#     N = map(int,input().split())
-#     value = list(map(int,input().split()))
-
-#     heap = [0] * (N+1)
-    
-#     idx = 1
-
-#     inorder(1)   # 1부터 시작하기 때문에
-
-#     print(tree)
-
 for tc in range(1, T+1):
     N = map(int,input().split())
     numbers = list(map(int,input().split()))
@@ -66,6 +39,9 @@ for tc in range(1, T+1):
 
     print(total)
 
+
+
+    # 파이썬 내장함수로 이진힙 진행하기
     # import heapq
     # heapq.heapify(numbers)
     
